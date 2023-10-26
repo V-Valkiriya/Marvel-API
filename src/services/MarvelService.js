@@ -1,7 +1,7 @@
 import { key } from './key';
 class MarvelService {
     _apiBase = 'https://gateway.marvel.com:443/v1/public/';
-    _apiKey = `${key}`; // add your own key from https://developer.marvel.com
+   _apiKey = `${key}`; //'apikey=...'  //add your own key from https://developer.marvel.com
     _baseOffset = 210;
 
     getResource = async(url) => {
