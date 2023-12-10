@@ -6,6 +6,8 @@ import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
 import './charInfo.scss';
+import { Link } from 'react-router-dom';
+
 
 const CharInfo = (props) => {
    
@@ -78,12 +80,14 @@ const View = ({char}) => {
             <div className="char__comics">Comics:</div>
             <ul className="char__comics-list">
                 {comics.length > 0 ? null : 'Sorry, there are no comics with this character'}
-                {
-                    comics.map((item, i) => {
+                {comics.map((item, i) => {
+
                         // eslint-disable-next-line
                         if (i > 9) return;
                         return (
-                            <li key={i} className="char__comics-item">
+                            <li 
+                            key={i} 
+                            className="char__comics-item">
                            {item.name}
                            </li>
                         )
